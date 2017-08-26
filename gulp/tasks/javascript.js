@@ -25,7 +25,8 @@ gulp.task('javascript:app', function() {
   return gulp.src([
       config.src.js + '/*.js'
      ])
-    .pipe(config.production ? uglifyJs() : util.noop())
+    // error on build?
+    // .pipe(config.production ? uglifyJs() : util.noop())
     .pipe(plumber({ errorHandler: config.errorHandler }))
     .pipe(concat('app.js'))
     .pipe(gulp.dest(config.dest.js));
