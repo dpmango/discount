@@ -1,17 +1,37 @@
 // HEADER :: START
 header.header
-  .container
-    .header__wrapper
-      .header__logo
-        a.logo(href="/homepage.pug")
-          +icon('icon-viber')
-      .header__menu
-        ul.header__menu__list
-          - var list = ["Point 1", "Point 2", "Point 3"]
-            each item in list
-              li
-                a.header__menu__link(href="#")=item
-      
-      .header__cta
+  // top
+  .header__top
+    .container.container--wide
+      .header__top-wrapper
+        .header__socials
+          a(href="#")
+            +icon('ico-vk')
+          a(href="#")
+            +icon('ico-fb')
+            
+        .header__logo
+          a.logo(href="/homepage.pug")
+            i.icon.icon-logo
+        
+        .header__contact
+          a(href="#").header__profile-link личный кабинет
+          a(href="tel:84991362333") 8 (499) 136-23-33
+          
+  // bottom
+  .header__bottom
+    .container.container--wide
+      .header__bottom-wrapper
+        .header__search
+          +icon('ico-search')
+        .header__menu
+          ul.header__menu-list
+            - var list = ["Новинки", "Одежда", "Обувь", "Аксессуары", "Условия доставки", "Контакты"]
+              each item in list
+                li
+                  a(href="#")=item
+        
+        .header__cart
+          +icon('ico-cart')
         
 // HEADER :: END

@@ -16,7 +16,7 @@ ul
 body, html
   background: white
   color: $fontColor
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-family: 'Fugue', 'Helvetica Neue', Helvetica, Arial, sans-serif
   font-size: 16px
   min-width: 320px
   max-width: 100%
@@ -26,8 +26,18 @@ body, html
   -moz-osx-font-smoothing: grayscale
 
 .container
-  max-width: 1200px
+  width: 100%
+  max-width: 1120px
   margin-left: auto
   margin-right: auto
   padding-left: 20px
   padding-right: 20px
+  &--wide
+    max-width: 1400px
+
+.page
+  display: flex
+  flex-direction: column
+  &__content
+    flex: 1 1 auto
+    padding-top: 130px

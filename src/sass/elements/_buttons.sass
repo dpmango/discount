@@ -13,6 +13,39 @@ button
   transition: all $transitionSpeed ease-in-out
   &:focus, &:active
     outline: none
+  &--primary
+    z-index: 1
+    padding: 12px 40px
+    border-radius: 50px
+    background: white
+    color: $colorOrange
+    font-family: 'FugueHead'
+    letter-spacing: .2em
+    font-size: 18px
+    text-transform: uppercase
+    overflow: hidden
+    &::before
+      display: inline-block
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      opacity: 0
+      size: 50px
+      background: rgba($colorOrange, .8)
+      border-radius: 50%
+      transform: translate3d(-50%,-50%,0) scale(0)
+      transition: transform .3s ease-in
+    span
+      position: relative
+      z-index: 2
+    &:hover
+      color: white
+      &::before
+        opacity: 1
+        transform: translate3d(-50%,-50%,0) scale(5)
+
+
   &--block
     display: block
     width: 100%

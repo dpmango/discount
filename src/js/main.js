@@ -94,15 +94,14 @@ $(document).ready(function(){
   // SLIDERS
   //////////
 
-  $('.trending__wrapper').slick({
+  $('.hero-slider').slick({
     autoplay: true,
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    centerMode: true,
-    variableWidth: true
+    vertical: true
   });
 
   //////////
@@ -135,27 +134,27 @@ $(document).ready(function(){
 
   // Magnific Popup
   // var startWindowScroll = 0;
-  $('.js-popup').magnificPopup({
-    type: 'inline',
-    fixedContentPos: true,
-    fixedBgPos: true,
-    overflowY: 'auto',
-    closeBtnInside: true,
-    preloader: false,
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'popup-buble',
-    callbacks: {
-      beforeOpen: function() {
-        // startWindowScroll = _window.scrollTop();
-        // $('html').addClass('mfp-helper');
-      },
-      close: function() {
-        // $('html').removeClass('mfp-helper');
-        // _window.scrollTop(startWindowScroll);
-      }
-    }
-  });
+  // $('.js-popup').magnificPopup({
+  //   type: 'inline',
+  //   fixedContentPos: true,
+  //   fixedBgPos: true,
+  //   overflowY: 'auto',
+  //   closeBtnInside: true,
+  //   preloader: false,
+  //   midClick: true,
+  //   removalDelay: 300,
+  //   mainClass: 'popup-buble',
+  //   callbacks: {
+  //     beforeOpen: function() {
+  //       // startWindowScroll = _window.scrollTop();
+  //       // $('html').addClass('mfp-helper');
+  //     },
+  //     close: function() {
+  //       // $('html').removeClass('mfp-helper');
+  //       // _window.scrollTop(startWindowScroll);
+  //     }
+  //   }
+  // });
 
 
   // $('.popup-with-move-anim').magnificPopup({

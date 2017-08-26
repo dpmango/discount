@@ -6,7 +6,8 @@ https://discount.surge.sh
 
 
 ## How to start
-* `npm install` or `yarn` - install all dependencies
+* `npm install` or `yarn` - install npm dependencies
+* `bower i`- install bower packages
 * `gulp` - run dev-server
 * `gulp build` - build project from sources
 

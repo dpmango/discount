@@ -1,4 +1,86 @@
 // HEADER
 .header
-  &__wrapper
-    
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 10
+  &__top
+    padding: 30px 0 25px 0
+    background: #f2f2f2
+    &-wrapper
+      display: flex
+      align-items: center
+  &__socials
+    flex: 0 1 25%
+  &__logo
+    flex: 0 1 auto
+    margin-left: auto
+    margin-right: auto
+    padding: 0 20px
+    transition: translate3d(0,5px,0)
+    transition: all $transitionSpeed $ease
+    &:hover
+      opacity: .7
+  &__contact
+    flex: 0 1 25%
+    display: flex
+    align-items: center
+  &__profile-link
+    margin-right: 20px
+    font-size: 14px
+    color: $fontColor50
+    transition: color $transitionSpeed $ease
+    &:hover
+      color: $fontColor
+  &__phone
+    font-family: 'FugueMono', monospace
+    font-size: 14px
+    transition: color $transitionSpeed $ease
+    &:hover
+      color: $colorOrange
+
+  &__bottom
+    background: white
+    &-wrapper
+      display: flex
+      align-items: center
+      min-height: 70px
+  &__search
+    flex: 0 1 10%
+  &__cart
+    flex: 0 1 10%
+  &__menu
+    flex: 1 1 auto
+    padding: 0 20px
+    margin-left: auto
+    margin-right: auto
+    &-list
+      display: flex
+      justify-content: space-between
+      margin: 0
+      padding: 0
+      font-size: 18px
+      overflow: hidden
+      padding: 25px 0 25px 0
+      li
+        display: inline-block
+        a
+          position: relative
+          transition: all $transitionSpeed $ease
+          padding: 5px
+          &::after
+            display: inline-block
+            content: ' '
+            position: absolute
+            bottom: 0
+            left: 5px
+            right: 5px
+            background: $colorOrange
+            height: 4px
+            transform: translate3d(0,30px,0)
+            transition: transform $transitionSpeed $ease
+          &:hover
+            color: $colorOrange
+            &::after
+              transform: translate3d(0,20px,0)
