@@ -34,17 +34,30 @@
   position: relative
   color: white
   text-align: center
+  overflow: hidden
+  font-size: 0
+  &.removing
+    .hero-slide__image
+      transform: translate(-50%,-50%) scale(1)
+      opacity: .8
+  &.showing
+    .hero-slide__image
+      transform: translate(-50%,-50%) scale(1.1)
+      opacity: 1
   &__image
     position: absolute
-    top: 50%
+    top: 90%
     left: 50%
     z-index: 1
-    transform: translate(-50%,-50%)
+    transform: translate(-50%,-50%) scale(1)
+    opacity: .8
     min-width: 100%
     min-height: 100%
     width: auto !important
+    mix-blend-mode: multiply
     // slick fix
     height: auto
+    transition: transform $transitionSpeed ease-out, opacity $transitionSpeed linear
   &__content
     position: relative
     z-index: 2
@@ -64,6 +77,9 @@
     font-weight: 900
     font-size: 73px
     line-height: 1
+    max-width: 850px
+    margin-left: auto
+    margin-right: auto
   &__description
     margin-top: 25px
     font-size: 20px

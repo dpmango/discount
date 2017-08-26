@@ -94,14 +94,35 @@ $(document).ready(function(){
   // SLIDERS
   //////////
 
+  $('.hero-slider').on('init', function(event, slick){
+    $('.hero-slide[data-slide=' + 1 + ']').addClass('showing');
+  });
+
   $('.hero-slider').slick({
-    autoplay: true,
+    autoplay: false,
+    autoplaySpeed: 4000,
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 300,
+    speed: 400,
+    cssEase: 'ease-in',
+    pauseOnFocus: false,
+    pauseOnHover: false,
     slidesToShow: 1,
     vertical: true
+  });
+
+  // set active class
+  $('.hero-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    var slideNumber = currentSlide + 1
+    console.log(slideNumber)
+    $('.hero-slide[data-slide=' + slideNumber + ']').addClass('removing');
+  });
+  $('.hero-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    $('.hero-slide').removeClass('removing');
+    $('.hero-slide').removeClass('showing');
+    var slideNumber = currentSlide + 1;
+    $('.hero-slide[data-slide=' + slideNumber + ']').addClass('showing');
   });
 
   //////////

@@ -5,7 +5,7 @@ bodyClass: homepage
 extends shared/_layout
 block content
   .hero-slider
-    .hero-slide(style="background-color: #ff5116")
+    .hero-slide(data-slide='1' style="background-color: #ff5116")
       img.hero-slide__image(src='img/heroSlide_1.jpg' srcset='img/heroSlide_1@2x.jpg 2x')
       .container
         .hero-slide__content
@@ -15,26 +15,23 @@ block content
           .hero-slide__cta
             a(href="#").btn.btn--primary 
               span Подробнее
-    .hero-slide(style="background-color: #ff5116")
+    .hero-slide(data-slide='2' style="background-color: blueviolet")
+      img.hero-slide__image(src='img/heroSlide_1.jpg' srcset='img/heroSlide_1@2x.jpg 2x')
+      .container
+        .hero-slide__content
+          .hero-slide__tag Спец. предложение
+          .hero-slide__title Мужские футболки на синем фоне
+          .hero-slide__description Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление.
+          .hero-slide__cta
+            a(href="#").btn.btn--primary 
+              span Подробнее
+    .hero-slide(data-slide='3' style="background-color: coral")
       img.hero-slide__image(src='img/heroSlide_1.jpg' srcset='img/heroSlide_1@2x.jpg 2x')
       .container
         .hero-slide__content
           .hero-slide__tag Новые поступления
-          .hero-slide__title Мужские футболки с коротким рукавом
-          .hero-slide__description Мужская одежда - звучит сильно! Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление.
-          .hero-slide__cta
-            a(href="#").btn.btn--primary 
-              span Подробнее
-    .hero-slide(style="background-color: #ff5116")
-      img.hero-slide__image(src='img/heroSlide_1.jpg' srcset='img/heroSlide_1@2x.jpg 2x')
-      .container
-        .hero-slide__content
-          .hero-slide__tag Новые поступления
-          .hero-slide__title Мужские футболки с коротким рукавом
-          .hero-slide__description Мужская одежда - звучит сильно! Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление.
-          .hero-slide__cta
-            a(href="#").btn.btn--primary 
-              span Подробнее
+          .hero-slide__title Ух как крутит
+          .hero-slide__description Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление. Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление
   // iteration example
   //- - var socials = ['email','fb-messenger','skype','telegram','viber','whatup']
   //-   each social in socials
