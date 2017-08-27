@@ -6,6 +6,8 @@
     position: absolute
     right: 30px
     top: 50%
+    margin: 0
+    padding: 0
     transform: translateY(-50%)
     li
       position: relative
@@ -29,6 +31,20 @@
         &::after
           background: white
 
++r($tablet)
+  .hero-slider
+    .slick-dots
+      top: auto
+      bottom: 30px
+      right: auto
+      left: 50%
+      transform: translate3d(-50%,0,0)
+      li
+        display: inline-block
+        margin-bottom: 0
+        margin-right: 7px
+        &:last-child
+          margin-right: 0
 
 .hero-slide
   position: relative
@@ -61,6 +77,7 @@
   &__content
     position: relative
     z-index: 2
+    padding: 50px 20px
     min-height: 500px
     height: calc(100vh - 130px)
     max-height: 800px
@@ -89,3 +106,40 @@
     margin-right: auto
   &__cta
     margin-top: 20px
+
++r($desktop)
+  .hero-slide
+    &__title
+      font-size: 65px
+    &__description
+      font-size: 19px
+
++r($tablet)
+  .hero-slide
+    &__content
+      min-height: calc(100vh - 75px)
+      height: auto
+      // max-height: auto
+    &__tag
+      margin-bottom: 10px
+    &__title
+      font-size: 55px
+    &__description
+      font-size: 17px
+
+
++r($mobile)
+  .hero-slide
+    &__content
+      padding: 50px 0px
+    &__tag
+      font-size: 15px
+    &__title
+      font-size: 44px
+    &__description
+      font-size: 16px
+
++r($mobile-s)
+  .hero-slide
+    &__title
+      font-size: 38px
