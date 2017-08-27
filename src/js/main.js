@@ -67,9 +67,19 @@ $(document).ready(function(){
 
   // HAMBURGER TOGGLER
   $('.hamburger').on('click', function(){
-    $('.hamburger').toggleClass('active');
+    $('.hamburger').toggleClass('is-active');
     $('.mobile-navi').toggleClass('active');
+    $('body').toggleClass('locked');
   });
+
+  $(document).mouseup(function (e) {
+  		var elem = $('.mobile-navi');
+  		if (elem.is('.active') && e.target != elem[0] && !elem.has(e.target).length) {
+        $('.hamburger').removeClass('is-active');
+        $('.mobile-navi').removeClass('active');
+        $('body').removeClass('locked');
+  		}
+  	});
 
   // SET ACTIVE CLASS IN HEADER
   // * could be removed in production and server side rendering

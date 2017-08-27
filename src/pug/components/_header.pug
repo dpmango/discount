@@ -4,6 +4,11 @@ header.header
   .header__top
     .container.container--wide
       .header__top-wrapper
+        .header__hamburger
+          .hamburger.hamburger--spin
+            .hamburger-box
+              .hamburger-inner
+              
         .header__socials
           a(href="#")
             +icon('ico-vk')
@@ -11,12 +16,12 @@ header.header
             +icon('ico-fb')
             
         .header__logo
-          a.logo(href="/homepage.pug")
+          a(href="/homepage.html")
             i.icon.icon-logo
         
         .header__contact
           a(href="#").header__profile-link личный кабинет
-          a(href="tel:84991362333") 8 (499) 136-23-33
+          a.header__phone(href="tel:84991362333") 8 (499) 136-23-33
           
   // bottom
   .header__bottom
@@ -35,3 +40,28 @@ header.header
           +icon('ico-cart')
         
 // HEADER :: END
+
+
+// MOBILE NAVI :: START
+.mobile-navi
+  .mobile-navi__wrapper
+    .mobile-navi__menu
+      ul.mobile-navi__menu-list
+        - var list = ["Новинки", "Одежда", "Обувь", "Аксессуары", "Условия доставки", "Контакты"]
+          each item in list
+            li
+              a(href="#")=item
+    .header__socials
+      a(href="#")
+        +icon('ico-vk')
+      a(href="#")
+        +icon('ico-fb')
+    .mobile-navi__bottom
+      .header__cart
+        +icon('ico-cart')
+      .header__contact
+        a(href="#").header__profile-link личный кабинет
+        a.header__phone(href="tel:84991362333") 8 (499) 136-23-33
+    
+        
+// MOBILE NAVI :: END
