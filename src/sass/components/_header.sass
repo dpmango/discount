@@ -5,9 +5,12 @@
   left: 0
   right: 0
   z-index: 10
+  background: #fff
+  line-height: 1
   &__top
     padding: 10px 0
     background: #f2f2f2
+    min-height: 78px
     &-wrapper
       display: flex
       align-items: center
@@ -17,15 +20,19 @@
     flex: 0 1 30%
     a
       margin-right: 5px
+      &:hover
+        .ico
+          fill: #ED4B15
     .ico
       fill: $colorOrange
       font-size: 25px
     .ico-vk
-      &:hover
-        fill: $vk
+      fill: $vk
     .ico-fb
-      &:hover
-        fill: $facebook
+      fill: $facebook
+    .ico-im
+      fill: $instagram
+
   &__logo
     flex: 0 1 auto
     margin-left: auto
@@ -33,8 +40,12 @@
     padding: 20px 20px 15px 20px
     transition: translate3d(0,5px,0)
     transition: opacity $transitionSpeed $ease
+
     &:hover
       opacity: .7
+    img
+      max-width: 100%
+     
   &__contact
     flex: 0 1 30%
     display: flex
@@ -67,6 +78,85 @@
       fill: $colorOrange
       &:hover
         fill: $fontColor
+    &-open
+      background: none
+      padding: 0
+      position: relative
+      z-index: 100
+      cursor: pointer
+    &-field
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      width: 0
+      overflow: hidden
+      background: #fff
+      z-index: 100
+      display: flex
+      align-items: center
+      padding: 5px 10px
+      transition: .25s
+      // transform: translate3d(-100%,0,0)
+      // opacity: 0
+      // visibility: hidden
+      // left: 60px
+      form
+        margin: 0
+        width: 100%
+    &-input
+      width: 100%
+      font-size: 14px
+      line-height: 18px
+      padding: 15px 80px 15px 40px
+      border: 1px solid #000
+      transition: .25s
+      opacity: 0
+      &::placeholder
+        color: #000
+    &-btn
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 10px
+      padding: 0
+      background: none
+      cursor: pointer
+      width: 40px
+      .ico
+        top: 2px
+        position: relative
+    &-close
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 15px
+      padding: 0
+      background: none
+      cursor: pointer
+      width: 30px
+      margin-top: 1px
+      cursor: pointer
+      z-index: 10
+      &:after, &:before
+        content: ''
+        display: block
+        width: 20px
+        height: 2px
+        background: #000
+        position: absolute
+        top: 50%
+        left: 50%
+        margin: -2px 0 0 -10px
+        transition: .25s
+      &:after
+        transform: rotate(-45deg)
+      &:before
+        transform: rotate(45deg)
+      &:hover
+        &:after, &:before
+          background: #ED4B15
+
   &__cart
     flex: 0 1 7%
     text-align: right
@@ -131,10 +221,10 @@
       display: block
     &__logo
       margin: 0
-      transform: translate3d(0,-3px,0)
-      .icon
-        transform: scale(.85)
-        transform-origin: left center
+      // transform: translate3d(0,-3px,0)
+      // .icon
+        // transform: scale(.85)
+        // transform-origin: left center
     &__socials
       display: none
     &__contact
@@ -151,13 +241,22 @@
 +r($mobile-s)
   .header
     &__logo
-      padding-left: 10px
-      .icon
-        transform: scale(.75)
+      // padding-left: 10px
+      // .icon
+        // transform: scale(.75)
 
 +r(375)
   .header
     &__logo
-      padding-left: 0
-      .icon
-        transform: scale(.65)
+      // padding-left: 0
+      // .icon
+        // transform: scale(.65)
+
+
+
+.is-searchOpen
+  .header__search-field
+    width: 100%
+    transform: translate3d(0,0,0)
+  .header__search-input
+    opacity: 1

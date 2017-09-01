@@ -68,3 +68,259 @@
       line-height: 1.3
       font-size: 14px
       cursor: pointer
+
+// Select
+.ui-select
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  z-index: 10
+  width: 100%
+  margin: 0 0 20px
+  text-align: left
+  cursor: pointer
+  &.ui-select__dark
+    .jq-selectbox__select
+      color: #262e39
+      border-color: #262e39
+    .jq-selectbox__trigger-arrow
+      @include sprite(arrow-down-dark)
+
+  &.ui-select__white
+    .jq-selectbox__select
+      color: #000000
+      background: #fff
+      border-color: #fff
+    .jq-selectbox__trigger-arrow
+      @include sprite(arrow-down-orange)
+  
+
+
+  .jq-selectbox__select
+    transition: .25s
+    width: 100%
+    background: none
+    border: 1px solid #fff
+    border-radius: 19px
+    box-shadow: none
+    font: 700 14px/21px 'Proxima Nova', Helvetica, Arial, sans-serif
+    padding: 8px 32px 8px 20px
+    color: #fff
+    margin: 0
+    position: relative
+    
+  .jq-selectbox__select-text
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    user-select: none
+
+  .jq-selectbox__trigger
+    width: 40px
+    height: 100%
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+
+  .jq-selectbox__trigger-arrow
+    position: absolute
+    top: 50%
+    left: 50%
+    @include sprite(arrow-down-white)
+    margin: -3px 0 0 -5px
+    
+
+  .jq-selectbox__dropdown
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    background: #fff
+    border-radius: 0
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05)
+    margin: 10px 0
+    overflow: hidden
+    border-radius: 19px;
+    font: 700 14px/21px 'Proxima Nova', Helvetica, Arial, sans-serif
+
+  ul
+    position: relative
+    list-style: none
+    overflow: auto
+    overflow-x: hidden
+    -webkit-overflow-scrolling: touch
+    max-height: 252px !important
+    li
+      display: block
+      padding: 7px 20px
+      color: #000
+      cursor: pointer
+      border-bottom: 1px solid #F2F2F2
+      &:last-child
+        border: none
+      &:hover
+        background: #FF5116
+        color: #fff
+
+  .jq-selectbox__search
+    input
+      -webkit-appearance: textfield
+      &::-webkit-search-cancel-button, &::-webkit-search-decoration
+        -webkit-appearance: none
+
+  select
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: 0
+    padding: 0
+    opacity: 0
+    visibility: hidden
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      user-select: none
+      white-space: nowrap
+
+
+
+.ui-number
+  width: 90px
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  .jq-number__field
+    width: 100%
+    position: relative
+    border: 1px solid #E5E5E5
+    height: 39px
+    border-radius: 19px
+    input
+      border: none
+      padding: 9px 30px
+      background: none
+      width: 100%
+      font: 700 14px/21px 'Proxima Nova', Helvetica, Arial, sans-serif
+      color: #ff5116
+      text-align: center
+      -moz-appearance textfield
+      -webkit-appearance none
+      &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+        margin: 0
+        -webkit-appearance none
+        display: none
+  .jq-number__spin
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 35px
+    cursor: pointer
+    transition: .25s
+    backface-visibility: hidden
+    &:hover
+
+      transform: scale(0.8)
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      margin: -3px 0 0 -5px
+    &.minus
+      left: 0
+      &:after
+        @include sprite(arrow-down-orange)
+    &.plus
+      right: 0
+      &:after
+        @include sprite(arrow-up-orange)
+
+
+  // &__field
+  //   width 100px
+  //   border 1px solid #CCC
+  //   border-bottom-color #B3B3B3
+  //   border-radius 4px
+  //   box-shadow inset 1px 1px #F1F1F1, 0 1px 2px rgba(0,0,0,.1)
+  //   input
+  //     box-sizing border-box
+  //     width 100%
+  //     padding 8px 9px
+  //     border none
+  //     outline none
+  //     background none
+  //     font 14px Arial, sans-serif
+  //     color #333
+  //     text-align left
+  //     -moz-appearance textfield
+  //     &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+  //       margin 0
+  //       -webkit-appearance none
+  // &__spin
+  //   position absolute
+  //   top 0
+  //   right 0
+  //   width 32px
+  //   height 14px
+  //   border 1px solid #CCC
+  //   border-bottom-color #B3B3B3
+  //   border-radius 4px
+  //   background linear-gradient(#FFF, #E6E6E6)
+  //   box-shadow 0 1px 2px rgba(0,0,0,.1)
+  //   box-shadow inset 1px -1px #F1F1F1, inset -1px 0 #F1F1F1, 0 1px 2px rgba(0,0,0,.1)
+  //   user-select none
+  //   text-shadow 1px 1px #FFF
+  //   cursor pointer
+  //   &.minus
+  //     top auto
+  //     bottom 0
+  //   &:hover
+  //     background linear-gradient(#F6F6F6, #E6E6E6)
+  //   &:active
+  //     background #F5F5F5
+  //     box-shadow inset 1px 1px 3px #DDD
+  //   &:after
+  //     content ''
+  //     position absolute
+  //     top 4px
+  //     left 11px
+  //     width 0
+  //     height 0
+  //     border-right 5px solid transparent
+  //     border-bottom 5px solid #999
+  //     border-left 5px solid transparent
+  //   &.minus
+  //     &:after
+  //       top 5px
+  //       border-top 5px solid #999
+  //       border-right 5px solid transparent
+  //       border-bottom none
+  //       border-left 5px solid transparent
+  //     &:hover
+  //       &:after
+  //         border-top-color #000
+  //   &.plus
+  //     &:hover
+  //       &:after
+  //         border-bottom-color #000
+  // &.focused .jq-number__field
+  //   border 1px solid #5794BF
+  // &.disabled .jq-number__field,
+  // &.disabled .jq-number__spin
+  //   border-color #CCC
+  //   background #F5F5F5
+  //   box-shadow none
+  //   color #888
+  // &.disabled .jq-number__spin
+  //   &:after
+  //     border-bottom-color #AAA
+  //   &.minus
+  //     &:after
+  //       border-top-color #AAA

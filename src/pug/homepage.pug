@@ -38,10 +38,235 @@ block content
   //-     a(class="social-share" href="#" role="button")
   //-       +icon('ico-'+social)
   
-  .section
+  .catalog
     .container
-      .row(style='height: 300px')
-        .col-sm-4.col-lg-3(style='border: 1px solid #ccc')
-        .col-sm-4.col-lg-3(style='border: 1px solid #ccc')
-        .col-sm-4.col-lg-3(style='border: 1px solid #ccc')
-        .col-sm-4.col-lg-3(style='border: 1px solid #ccc')
+      h2.catalog__heading Каталог товаров
+
+      p.catalog__text Мужская одежда - звучит сильно! Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление.
+      
+      nav.catalog-nav
+        ul.catalog-nav__menu
+          - var list = ["Куртки", "Обувь", "Кофты/толстовки", "Футболки", "Классические костюмы", "Контакты", "Аксессуары", "Шапки", " Спорт", "Детям"]
+                each item in list
+                  li
+                    a(href="#").catalog-nav__menu-link=item
+
+      .row
+        .col-sm-6
+          .catalog-item
+              h3.catalog-item__title
+                mark Актуальное
+                a(href="#") Классические костюмы
+              figure.catalog-item__image
+                img(src="img/img-catalog-1.png")
+              .catalog-item__info
+                p.catalog-item__price 1 600 руб.
+                p.catalog-item__tag
+                   a(href="#") Мужская кофта
+                a(href="#").btn.btn--add в корзину
+
+        .col-sm-6
+          .catalog-item
+              h3.catalog-item__title
+                mark Актуальное
+                a(href="#") Обувь
+              figure.catalog-item__image
+                img(src="img/img-catalog-2.png")
+              .catalog-item__info
+                p.catalog-item__price 2 500 руб.
+                p.catalog-item__tag
+                  a(href="#") Мужские ботинки
+                a(href="#").btn.btn--add в корзину
+
+        .col-md-6
+          .catalog-item.--orange
+            .catalog-item-in
+              figure.catalog-item__image
+                img(src="img/img-catalog-3.png")
+              h3.catalog-item__title
+                mark Самое нужное <br>на осень
+                a(href="#") Мужские аксессуары
+              .catalog-item__info
+                p.catalog-item__price 1 600 руб.
+                p.catalog-item__tag
+                  a(href="#") Мужская кофта
+                a(href="#").btn.btn--add в корзину
+
+        .col-md-6
+
+          .row
+            .col-sm-6
+              .catalog-item.--small
+                .catalog-item__info
+                  h3.catalog-item__title
+                    a(href="#") Куртки
+                  p.catalog-item__price 2 500 руб.
+                figure.catalog-item__image
+                  img(src="img/img-catalog-4.png")
+            .col-sm-6
+              .catalog-item.--small
+                .catalog-item__info
+                  h3.catalog-item__title
+                    a(href="#") Обувь
+                  p.catalog-item__price от 1 600 руб.
+                figure.catalog-item__image
+                  img(src="img/img-catalog-5.png")
+            .col-sm-6
+              .catalog-item.--small
+                .catalog-item__info
+                  h3.catalog-item__title
+                    a(href="#") Кофты/Толстовки
+                  p.catalog-item__price от 780 руб.
+                figure.catalog-item__image
+                  img(src="img/img-catalog-6.png")
+            .col-sm-6
+              .catalog-item.--small
+                .catalog-item-in
+                  h3.catalog-item__title
+                    a(href="#") Футболки
+                  p.catalog-item__price 2 500 руб.
+                figure.catalog-item__image
+                  img(src="img/img-catalog-7.png")
+
+      .catalog__ctrl
+        a(href="#").btn.btn--primary
+          span смотреть весь каталог
+
+      hr.catalog__line
+    
+      h2.catalog__heading Новинки
+
+      .catalog-slider
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-1.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-2.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-3.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-4.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-4.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-4.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+  .about
+    .container
+      .about__desc
+        h2.about__heading О магазине
+        p.about__text Мужская одежда - звучит сильно! Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление.
+      .row
+        .col-sm-6.col-md-3
+          .about-item
+            +icon('ico-about-1')
+            h3.about-item__title Магазин <br>на Горбушке
+            p.about-item__text У нас имеется живой магазин на Горбушке, в 2-х минутах от метро Багратионовская, где представлен огромный ассортимент одежды, обуви и аксессуаров.
+
+        .col-sm-6.col-md-3
+          .about-item
+            +icon('ico-about-2') 
+            h3.about-item__title Низкие <br>цены
+            p.about-item__text НИЗКИЕ ЦЕНЫ - это наш девиз! Покупайте и заказывайте одежду в нашем мужском Дисконте по лучшим ценам в РФ.
+
+        .col-sm-6.col-md-3
+          .about-item
+            +icon('ico-about-3')
+            h3.about-item__title Доставка <br>по РФ
+            p.about-item__text Мы доставляем товары по всей России. Перед отправкой мы тщательно замеряем товар по Вашим параметрам. Данный способ гарантирует что купленная вещь Вам подойдет и будет радовать каждый день!
+
+        .col-sm-6.col-md-3
+          .about-item
+            +icon('ico-about-4')
+            h3.about-item__title Большой выбор <br>товаров
+            p.about-item__text В нашем мужском Дисконте представлен огромный выбор одежды, обуви и аксессуаров. Пополнение коллекций и поступление новых товаров происходит несколько раз в неделю.
+    
+
+    script(src='//api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
+    script.
+      ymaps.ready(function () {
+        var mapOptions = {
+          //- iconLayout: 'default#image',
+          //- iconImageHref: 'images/icon-location.png',
+          //- iconImageSize: [48, 51],
+          //- iconImageOffset: [-24, -25]
+        }
+        var myMap = new ymaps.Map('map', {
+          center: [55.58446640485473,37.385470500000004],
+          zoom: 8,
+          controls: []
+        }, {
+          searchControlProvider: 'yandex#search'
+        });
+        myPlacemark01 = new ymaps.Placemark([55.58446640485473,37.385470500000004], {}, mapOptions);
+        myMap.geoObjects.add(myPlacemark01);
+        myMap.behaviors.disable('scrollZoom');
+      });
+
+
+  .contacts
+    .contacts__map#map
+    .container
+      .contacts__desc
+        a(href="tel:73452681414").contacts__phone +7 (3452) 68-14-14
+        address.contacts__address Тюмень, ул. Мельникайте, 111
+           +icon('ico-loc')
+        p.contacts__worktime понедельник-пятница <br>с 7:00 до 18:00 <br>суббота <br>с 9:00 до 15:00
+        .contacts__social
+          p.contacts__social-text Присоединяйтесь к нам в соц. сетях
+          ul.contacts__social-menu
+            li
+              a(href="#").contacts__social-link
+                +icon('ico-vk')
+            li
+              a(href="#").contacts__social-link
+                +icon('ico-fb')
+            li
+              a(href="#").contacts__social-link
+                +icon('ico-im')
+
+  .seo
+    .container
+      h3.seo__heading Модная мужская одежда - достойный выбор.
+      p.seo__text Мужская одежда - звучит сильно! Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление. Но успешного человека характеризует не только умение быть аккуратным. Современные мужчины – такие же охотники, но их поле деятельности перенеслось из лесов в офисы, где «обмундирование» иногда играет жизненно важную роль. Мода – еще один параметр, по которому выбирают лидера. Умение следовать всем капризам этой дамы и при этом не потерять свою индивидуальность – вот ключевой залог создания успешного образа самодостаточного человека.
+

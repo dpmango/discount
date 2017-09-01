@@ -1,0 +1,67 @@
+---
+title: Контакты
+bodyClass: page-contacts
+---
+extends shared/_layout
+block content
+
+  
+
+
+  .contacts
+    .container
+      ul.breadcrumbs
+        - var list = ["Главная", "Каталог", "Одежда"]
+          each item in list
+            li
+              a(href="#").breadcrumbs__link=item
+
+      h1.contacts__heading Контакты
+   
+    .contacts-container
+      .contacts__map#map
+      .contacts__desc
+        a(href="tel:73452681414").contacts__phone +7 (3452) 68-14-14
+        address.contacts__address Тюмень, ул. Мельникайте, 111
+           +icon('ico-loc')
+        p.contacts__worktime понедельник-пятница <br>с 7:00 до 18:00 <br>суббота <br>с 9:00 до 15:00
+        .contacts__social
+          p.contacts__social-text Присоединяйтесь к нам в соц. сетях
+          ul.contacts__social-menu
+            li
+              a(href="#").contacts__social-link
+                +icon('ico-vk')
+            li
+              a(href="#").contacts__social-link
+                +icon('ico-fb')
+            li
+              a(href="#").contacts__social-link
+                +icon('ico-im')
+
+  .seo
+    .container
+      h3.seo__heading Модная мужская одежда - достойный выбор.
+      p.seo__text Мужская одежда - звучит сильно! Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление. Но успешного человека характеризует не только умение быть аккуратным. Современные мужчины – такие же охотники, но их поле деятельности перенеслось из лесов в офисы, где «обмундирование» иногда играет жизненно важную роль. Мода – еще один параметр, по которому выбирают лидера. Умение следовать всем капризам этой дамы и при этом не потерять свою индивидуальность – вот ключевой залог создания успешного образа самодостаточного человека.
+
+
+
+  script(src='//api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
+  script.
+    ymaps.ready(function () {
+      var mapOptions = {
+        //- iconLayout: 'default#image',
+        //- iconImageHref: 'images/icon-location.png',
+        //- iconImageSize: [48, 51],
+        //- iconImageOffset: [-24, -25]
+      }
+      var myMap = new ymaps.Map('map', {
+        center: [56.86803950940072,64.03502298318476],
+        zoom: 8,
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      });
+      myPlacemark01 = new ymaps.Placemark([57.13500456756542,65.56647849999995], {}, mapOptions);
+      //- myMap.geoObjects.add(myPlacemark01);
+      myMap.behaviors.disable('scrollZoom');
+    });

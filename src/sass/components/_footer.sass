@@ -1,4 +1,55 @@
 // FOOTER
 .footer
-  &__wrapper
+  background: #000
+  color: #fff;
+  overflow: hidden
+  text-align: center
+  padding: 68px 0 42px
+  line-height: 1
     
+.footer__logo
+	margin: 0 0 30px
+	img
+		max-width: 100%
+
+.footer__menu
+	font-size: 17px
+	line-height: 24px
+	margin: 0 0 20px
+
+.footer__menu-list
+	margin: 0
+	padding: 0
+	list-style: none
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+	li
+		margin: 0 18px
+
+.footer__menu-link
+	transition: .25s
+	text-decoration: underline
+	color: #ed4b15
+	&:hover
+		text-decoration: underline
+
+.copyright
+	font-size: 12px
+	line-height: 24px
+	margin: 0
+
+
++r($tablet)
+	.footer__logo
+		
+
++r($mobile-s)
+	.footer__logo
+	
+
++r(375)
+	.footer__logo
+		margin: 0 0 20px
+	

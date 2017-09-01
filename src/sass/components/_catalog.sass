@@ -1,0 +1,444 @@
+// Catalog
+
+
+.catalog
+  background: #F2F2F2
+  padding: 0 0 30px
+  font-size: 16px
+  line-height: 24px
+  color: #000000;
+  display: inline-block
+  width: 100%
+  &__heading
+    font: 700 40px/1 'Playfair Display', serif
+    margin: 0 0 25px
+    text-align: center
+    color: #262e39
+  &__text 
+    text-align: center
+    display: block
+    max-width: 670px
+    margin: 0 auto 34px
+  &__line
+    border: none
+    border-top: 1px solid #D9D9D9
+    margin: 20px 0
+  &-nav
+    text-align: center
+    font-size: 15px
+    line-height: 20px
+    margin: 0 0 18px
+    +r($mobile)
+      font-size: 17px
+      line-height: 27px
+      text-align: left
+
+  &-nav__menu
+    margin: 0
+    padding: 18px 0
+    list-style: none
+    border-top: 1px solid #D9D9D9
+    display: inline-block
+    vertical-align: top
+    li
+      margin: 0 30px 0 0
+      &:last-child
+        margin-right: 0
+
+
+  &-nav__menu-link
+    display: block
+    position: relative
+    color: #ed4b15;
+    transition: $transitionSpeed ease
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      bottom: 0
+      height: 1px
+      width: 0
+      background: #ed4b15
+      transition: $transitionSpeed ease
+    &:hover
+      color: #FF7344
+      &:after
+        width: 100%
+  &__ctrl
+    padding: 22px 0
+    text-align: center
+
+
+.catalog-item
+  background: #fff
+  margin: 0 0 24px
+  position: relative
+  z-index: 1
+  overflow: hidden
+  transition: all $transitionSpeed $ease
+  height: auto;
+  padding: 30px 48px 55px
+  color: #262e39
+  font-size: 14px
+  line-height: 24px
+  min-height: 528px
+  display: flex
+  flex-wrap: wrap
+  &-in
+    width: 100%
+
+  &:hover
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15)
+    transform: translate3d(0,-2px,0)
+  &__image
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: -1
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    margin: 0
+    width: 100%
+    img
+      display: block
+      width: auto
+      max-width: 100%
+      max-height: 100%
+      transform: translate3d(15%,0,0)
+    
+  &__title
+    font: 700 36px/1.111 'Playfair Display', serif
+    margin: 0 0 40px
+    display: block
+    max-width: 280px
+    align-self: flex-start
+    width: 100%
+    +r($mobile)
+      font-size: 32px
+    mark
+      font: 400 12px/14px 'FugueHead', sans-serif
+      background: none
+      color: inherit
+      letter-spacing: 3px
+      display: block
+      margin: 0 0 2px
+    a
+      transition: all $transitionSpeed $ease
+      color: #ed4b15
+      border-bottom: 1px solid #ed4b15
+      &:hover
+        color: #FF7344
+        border-color: #FF7344
+  &__info
+    width: 100%
+    align-self: flex-end
+  &__price
+    font: 900 21px/25px 'Playfair Display', serif
+    margin: 0
+  &__tag
+    font-size: 14px
+    margin: 0 0 25px
+    a
+      color: inherit
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+  .btn
+    margin-left: -10px
+
+  &.--orange
+    background: #ED4B15
+    color: #fff
+    text-align: center
+    align-items: center
+    .catalog-item__image
+      position: relative
+      justify-content: center
+      margin: 0 0 40px
+      img
+        transform: translate3d(0,0,0)
+    .catalog-item__title
+      margin-left: auto
+      margin-right: auto
+      a
+        color: #fff;
+        border-color: #fff
+          
+    .catalog-item__info
+      position: relative
+      bottom: 0
+      left: 0
+      padding: 0
+    .btn
+      margin: 0
+      // &:before
+      //   background: none
+      // &:hover
+      //   background: none
+      //   border-color: #fff
+      //   color: #fff
+
+  &.--small
+    min-height: 253px
+    align-items: flex-start
+    .catalog-item__image
+      left: 0
+      bottom: 0
+      top: auto
+      align-self: flex-end
+      justify-content: center
+      max-height: 140px
+      max-width: none
+      img
+        align-self: flex-end
+        transform: translate3d(0, 0, 0)
+    .catalog-item__info
+      align-self: flex-start
+    .catalog-item__title
+      font-size: 24px
+      line-height: 1
+      text-align: center
+      margin: 0 0 5px
+      max-width: none
+    .catalog-item__price
+      font-size: 16px
+      text-align: center
+
++r($tablet)
+  .catalog-item
+    min-height: auto
+    &__image
+      max-width: 70%
+      left: auto
+    &.--orange
+      .catalog-item__image
+        margin: 0 auto
+
++r($mobile)
+  .catalog-item
+    padding: 24px
+    &__image
+      position: relative
+      justify-content: center
+      margin: 0 auto
+      height: 240px
+      img
+        transform: translate3d(0,0,0)
+    &.--small
+      .catalog-item__image
+        top: 24px
+
+.catalog-slider
+  padding: 5px 0 0
+  margin: 0 -12px 12px
+  .products-item
+    margin: 2px 12px 0
+  .slick-dots
+    text-align: center
+    padding: 42px 0 0
+    margin: 0
+    li
+      display: inline-block
+      vertical-align: top
+      margin: 0 4px
+      &.slick-active
+        button
+          border-color: #ED4B15
+          background: #ED4B15
+    button
+      width: 14px
+      height: 14px
+      background: none
+      text-indent: -9999px
+      display: block
+      border: 1px solid #0D0D0D
+      border-radius: 50%
+      cursor: pointer
+
+
+
+.catalog-container
+  display: flex
+  flex-wrap: wrap
+
+
+
+
+.catalog-content
+  flex: 1
+  +r($desktop)
+    order: 2
+
+// ------
+
+.catalog-aside
+  display: flex
+  flex-wrap: wrap
+  flex: 252px 0 0
+  margin: 0 38px 0 0
+  background: #fff
+  align-self: flex-start
+  +r($desktop)
+    flex: 100% 0 0
+    margin: 0 0 35px
+    order: 1
+
+.catalog-aside__trigger
+  display: none
+  +r($desktop)
+    display: block
+    width: 100%
+    background: none
+    margin: 0
+    padding: 15px 30px 20px
+    font: 700 24px/1 'Playfair Display', serif
+    text-align: left
+    position: relative
+    cursor: pointer
+    border-bottom: 1px solid transparent
+    &:after
+      content: '+'
+      display: block
+      position: absolute
+      top: 50%
+      right: 0
+      padding: 0 20px
+      font: 400 24px/40px 'Fugue', sans-serif
+      margin: -20px 0 0
+    &.is-active
+      border-color: #E5E5E5
+      &:after
+        content: '-'
+
+.catalog-aside__content
+  padding: 25px 0
+  width: 100%
+  display: none
+
+  +rmin($desktop)
+    display: block !important
+
+.catalog-aside__group
+  border-bottom: 1px solid #E5E5E5
+  width: 100%
+  padding: 0 0 10px
+  margin: 0 0 15px
+  
+  &:last-child
+    border: none
+    padding-bottom: 0
+  +rmin($tablet)
+    float: left
+    width: 33.333%
+    border: none
+  +rmin($desktop)
+    float: none
+    width: 100%
+    border-bottom: 1px solid #E5E5E5
+
+.catalog-aside__heading
+  font: 400 24px/1 'FugueHead', sans-serif
+  color: #262e39
+  display: block
+  padding: 0 30px
+  margin: 0 0 8px
+  letter-spacing: 2px;
+
+.catalog-aside__menu
+  margin: 0
+  padding: 0 30px
+  list-style: none
+  font-size: 14px
+  line-height: 18px
+
+  li
+    display: block
+    margin: 0 0 4px
+    &:last-child
+      margin: 0
+
+.catalog-aside__link
+  color: #ed4b15
+  display: inline-block
+  padding: 4px 8px
+  text-decoration: underline
+  transition: .25s
+  &:hover, &.is-active
+    background: #ED4B15
+    text-decoration: none
+    color: #fff
+
+// -----
+
+.catalog-panel
+  position: relative
+  z-index: 1
+  background: #ED4B15
+  color: #fff
+  text-align: center
+  padding: 45px 20px 75px
+  margin: 0 0 32px
+  font-size: 16px
+  line-height: 24px
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    margin: 0
+    img
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__heading
+    display: inline-block
+    margin: 0 0 10px
+    padding: 10px 0 18px
+    font: 700 40px/1 'Playfair Display', serif
+    border-bottom: 1px solid rgba(255,255,255,0.3)
+  &__text
+    display: block
+    margin: 0 auto
+    max-width: 630px
+  .breadcrumbs__link
+    color: #fff
+
+
+
+// -------
+
+
+.catalog-products
+  margin: 0 -10px
+  padding: 0 0 15px
+  list-style: none
+  display: flex
+  flex-wrap: wrap
+  li
+    padding: 0 10px
+    margin: 0
+    width: 100%
+    +rmin($mobile)
+      width: 50%
+    +rmin($tablet)
+      width: 33.333%
+    +rmin($wide)
+      width: 25%
+
+
+
+// -------
+
+
+.catalog-line
+  border: none
+  border-top: 1px solid #DDDEDF
+  margin: 35px 0
+

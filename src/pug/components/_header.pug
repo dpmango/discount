@@ -14,10 +14,13 @@ header.header
             +icon('ico-vk')
           a(href="#")
             +icon('ico-fb')
+          a(href="#")
+            +icon('ico-im')
             
         .header__logo
           a(href="/homepage.html")
-            i.icon.icon-logo
+            img(src="img/logo.png", alt="DISCOUNT*MSK")
+            //- i.icon.icon-logo
         
         .header__contact
           a(href="#").header__profile-link личный кабинет
@@ -28,7 +31,17 @@ header.header
     .container.container--wide
       .header__bottom-wrapper
         .header__search
-          +icon('ico-search')
+          //- +icon('ico-search')
+          button.header__search-open
+               +icon('ico-search')
+          .header__search-field
+            form(action="#")
+              input(type="search", name="", placeholder="Найти").header__search-input
+              button.header__search-btn
+                 +icon('ico-search')
+              button.header__search-close
+                 //- +icon('ico-close')
+
         .header__menu
           ul.header__menu-list
             - var list = ["Новинки", "Одежда", "Обувь", "Аксессуары", "Условия доставки", "Контакты"]

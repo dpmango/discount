@@ -11,14 +11,15 @@ $(document).ready(function(){
   ////////////////////
 
   var validateErrorPlacement = function(error, element) {
-    error.addClass('ui-input__validation');
+    error.addClass('is-validation-text');
     error.appendTo(element.parent("div"));
   }
   var validateHighlight = function(element) {
-    $(element).parent('div').addClass("has-error");
+
+    $(element).addClass('is-error').removeClass('is-valid');
   }
   var validateUnhighlight = function(element) {
-    $(element).parent('div').removeClass("has-error");
+    $(element).removeClass('is-error').addClass('is-valid');
   }
   var validateSubmitHandler = function(form) {
     $(form).addClass('loading');
@@ -65,33 +66,27 @@ $(document).ready(function(){
     unhighlight: validateUnhighlight,
     submitHandler: validateSubmitHandler,
     rules: {
-      last_name: "required",
-      first_name: "required",
+      firstname: "required",
       email: {
         required: true,
         email: true
       },
-      password: {
-        required: true,
-        minlength: 6,
-      }
-      // phone: validatePhone
+      phone: validatePhone,
+      city: "required",
+      address: "required"
     },
     messages: {
-      last_name: "Заполните это поле",
-      first_name: "Заполните это поле",
+      firstname: "Заполните это поле",
       email: {
           required: "Заполните это поле",
           email: "Email содержит неправильный формат"
       },
-      password: {
+      phone: {
           required: "Заполните это поле",
-          email: "Пароль мимимум 6 символов"
+          minlength: "Введите корректный телефон"
       },
-      // phone: {
-      //     required: "Заполните это поле",
-      //     minlength: "Введите корректный телефон"
-      // }
+      city: "Заполните это поле",
+      address: "Заполните это поле",
     }
   });
 

@@ -1,7 +1,19 @@
 // FOOTER :: START
 footer.footer
-  .container
-    .footer__wrapper
+	.container
+		.footer__logo
+			a(href="/homepage.html")
+				img(src="img/logo-footer.png", alt="DISCOUNT*MSK")
+				//- i.icon.icon-logo-footer
+		.footer__menu
+			ul.footer__menu-list
+				- var list = ["Как выбрать размер", "Условия доставки", "Возврат", "Статьи", "Контакты"]
+					each item in list
+						li
+							a(href="#").footer__menu-link=item
+
+		p.copyright 2017 © Discount MSK — Дисконт №1 мужской одежды
+
       
       
 // FOOTER :: END

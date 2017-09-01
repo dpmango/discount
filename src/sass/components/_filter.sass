@@ -1,0 +1,29 @@
+// ------
+
+.filter
+  margin: 0 0 35px
+  &__row
+    
+    margin: 0 -10px
+    +rmin($mobile)
+      display: flex
+      align-items: center
+  &__left
+    padding: 0 10px
+    margin-right: auto
+  &__right
+    padding: 0 10px
+    margin-left: auto
+  &__label
+    display: none
+    +rmin($tablet)
+      display: inline-block
+      vertical-align: middle
+      padding: 0 10px
+      color: rgba(#262e39,0.7)
+  .ui-select
+    width: 100%
+    margin: 0 0 10px
+    +rmin($mobile)
+      width: auto
+      margin: 0

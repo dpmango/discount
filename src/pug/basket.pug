@@ -1,0 +1,128 @@
+---
+title: Ваш заказ
+bodyClass: page-basket
+---
+extends shared/_layout
+block content
+
+  
+
+
+  .basket
+    .container
+
+      h1.basket__heading Ваш заказ
+
+      .row
+        .col-lg-6
+          ul.basket__list
+            li
+              .basket-item
+                a(href="#").basket-item__delete
+                figure.basket-item__image
+                  img(src="img/img-product-1.png", alt="")
+                .basket-item__desc
+                  p.basket-item__price 2 500 руб.
+                  p.basket-item__tag
+                   a(href="#") Мужские ботинки
+                  small.basket-item__size размер S
+                .basket-item__count
+                  input(type="number", value="1", min="1", max="100", maxlength="3").ui-number
+                  label кол-во
+            li
+              .basket-item
+                a(href="#").basket-item__delete
+                figure.basket-item__image
+                  img(src="img/img-product-2.png", alt="")
+                .basket-item__desc
+                  p.basket-item__price 2 500 руб.
+                  p.basket-item__tag
+                   a(href="#") Мужские ботинки
+                  small.basket-item__size размер S
+                .basket-item__count
+                  input(type="number", value="1", min="1", max="100", maxlength="3").ui-number
+                  label кол-во
+
+            li
+              .basket-item
+                a(href="#").basket-item__delete
+                figure.basket-item__image
+                  img(src="img/img-product-3.png", alt="")
+                .basket-item__desc
+                  p.basket-item__price 2 500 руб.
+                  p.basket-item__tag
+                   a(href="#") Мужские ботинки
+                  small.basket-item__size размер S
+                .basket-item__count
+                  input(type="number", value="1", min="1", max="100", maxlength="3").ui-number
+                  label кол-во
+
+            li
+              .basket-item
+                a(href="#").basket-item__delete
+                figure.basket-item__image
+                  img(src="img/img-product-4.png", alt="")
+                .basket-item__desc
+                  p.basket-item__price 2 500 руб.
+                  p.basket-item__tag
+                   a(href="#") Мужские ботинки
+                  small.basket-item__size размер S
+                .basket-item__count
+                  input(type="number", value="1", min="1", max="100", maxlength="3").ui-number
+                  label кол-во
+        .col-lg-6
+          .basket__form
+            form(action="#").js-registration-form
+              legend.basket__legend Заполните данные
+              .row
+                .col-sm-6
+                  label.basket__label Ваше имя
+                  .basket__field
+                    input(type="text", value="", name="firstname").basket__input#firstname
+                    span.basket__icon
+                .col-sm-6
+                  label.basket__label Ваш e-mail
+                  .basket__field
+                    input(type="text", value="", name="email").basket__input#email
+                    span.basket__icon
+              .row
+                .col-sm-6
+                  label.basket__label Телефон
+                  .basket__field
+                    input(type="tel", name="phone").basket__input
+                    span.basket__icon
+                .col-sm-6
+                  label.basket__label Город
+                  .basket__field
+                    input(type="text", name="city").basket__input
+                    span.basket__icon
+
+              label.basket__label Адрес доставки
+              .basket__field
+                input(type="text", name="address", value="").basket__input
+                span.basket__icon
+
+              label.basket__label Комментарии к заказу
+              .basket__field
+                input(type="text", value="").basket__input
+
+              .row
+                .col-sm-6
+                  label.basket__label Способ оплаты
+                  select.ui-select.ui-select__white
+                    - var list = ["Наличными курьеру", "Курьерская доставка"]
+                      each item in list
+                        option=item
+
+                .col-sm-6
+                  label.basket__label Способ доставки
+                  select.ui-select.ui-select__white
+                    - var list = ["Курьерская доставка", "Наличными курьеру"]
+                      each item in list
+                        option=item
+
+              p.basket__total Итого с доставкой: 2 500 руб.
+
+              button(type="submit").btn.btn--block.btn--dark Оформить заказ
+
+

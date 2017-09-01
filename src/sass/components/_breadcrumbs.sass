@@ -1,0 +1,36 @@
+.breadcrumbs
+  margin: 0 0 28px
+  padding: 0
+  list-style: none
+  font: 400 10px/24px 'FugueHead', sans-serif
+  letter-spacing: 2px
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  
+  li
+    position: relative
+    padding: 0 25px 0 0
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 50%
+      right: 10px
+      margin: -5px 0 0
+      @include sprite(arrow-right)
+    &:last-child
+      padding: 0
+      &:after
+        display: none
+  &__link
+    transition: all $transitionSpeed $ease
+    color: #ff5116
+    &:hover
+      color: #FF7344
+  +rmin($mobile)
+    font-size: 12px
+    li
+      padding: 0 35px 0 0
+      &:after
+        right: 12px

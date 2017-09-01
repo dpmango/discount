@@ -1,0 +1,211 @@
+---
+title: Карточка товара
+bodyClass: page-card
+---
+extends shared/_layout
+block content
+
+  .card
+    .container
+      .card-content
+        .row
+          .col-md-4
+            .card-desc
+              ul.breadcrumbs
+                - var list = ["Главная", "Каталог", "Одежда"]
+                  each item in list
+                    li
+                      a(href="#").breadcrumbs__link=item
+              h1.card__heading Свитшот
+              p.card__id Артикул: 268
+              p.card__price 1 600 руб.
+              .card__ctrl
+                .card__ctrl-field
+                  select.ui-select
+                    - var list = ["XS", "S", "M", "L", "XL"]
+                      each item in list
+                        option=item
+                  label.card__ctrl-label размер
+                .card__ctrl-field
+                  a(href="#").btn.btn--add в корзину
+
+              .card__size
+                p.card__size-text Лучше введите свои размеры
+                  small
+                    a(href="#") Инструкция по замеру кофты
+                .card__size-image
+                  img(src="img/img-size.png", alt="")
+                .card__size-ctrl
+                  .row
+                    .col-6
+                      .card__size-field
+                        span.card__size-number 1
+                        input(type="text", value="30").card__size-input
+                        label.card__size-label см
+                    .col-6
+                      .card__size-field
+                        span.card__size-number 2
+                        input(type="text", value="30").card__size-input
+                        label.card__size-label см
+                  .row
+                    .col-6
+                      .card__size-field
+                        span.card__size-number 3
+                        input(type="text", value="30").card__size-input
+                        label.card__size-label см
+                    .col-6
+                      .card__size-field
+                        span.card__size-number 4
+                        input(type="text", value="30").card__size-input
+                        label.card__size-label см
+
+
+          .col-md-8
+              .card-slider-container
+                .card-slider
+                  img(src="img/img-slide-1.jpg", alt="")
+                  img(src="img/img-slide-1.jpg", alt="")
+                  img(src="img/img-slide-1.jpg", alt="")
+                button.card-slider-prev
+                button.card-slider-next
+             
+ 
+  .catalog
+    .container
+    
+      h2.catalog__heading Смотрите также
+
+      .catalog-slider
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-1.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-2.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-3.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-4.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-4.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+        .catalog-slide
+          .products-item
+            figure.products-item__image
+              img(src="img/img-product-4.png")
+            p.products-item__price 2500р.
+            p.products-item__tag
+              a(href="#") Мужские футболки
+            a(href="#").btn.btn--add в корзину
+
+  .about
+    .container
+      .about__desc
+        h2.about__heading О магазине
+        p.about__text Мужская одежда - звучит сильно! Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление.
+      .row
+        .col-sm-6.col-md-3
+          .about-item
+            +icon('ico-about-1')
+            h3.about-item__title Магазин <br>на Горбушке
+            p.about-item__text У нас имеется живой магазин на Горбушке, в 2-х минутах от метро Багратионовская, где представлен огромный ассортимент одежды, обуви и аксессуаров.
+
+        .col-sm-6.col-md-3
+          .about-item
+            +icon('ico-about-2') 
+            h3.about-item__title Низкие <br>цены
+            p.about-item__text НИЗКИЕ ЦЕНЫ - это наш девиз! Покупайте и заказывайте одежду в нашем мужском Дисконте по лучшим ценам в РФ.
+
+        .col-sm-6.col-md-3
+          .about-item
+            +icon('ico-about-3')
+            h3.about-item__title Доставка <br>по РФ
+            p.about-item__text Мы доставляем товары по всей России. Перед отправкой мы тщательно замеряем товар по Вашим параметрам. Данный способ гарантирует что купленная вещь Вам подойдет и будет радовать каждый день!
+
+        .col-sm-6.col-md-3
+          .about-item
+            +icon('ico-about-4')
+            h3.about-item__title Большой выбор <br>товаров
+            p.about-item__text В нашем мужском Дисконте представлен огромный выбор одежды, обуви и аксессуаров. Пополнение коллекций и поступление новых товаров происходит несколько раз в неделю.
+    
+
+    script(src='//api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
+    script.
+      ymaps.ready(function () {
+        var mapOptions = {
+          //- iconLayout: 'default#image',
+          //- iconImageHref: 'images/icon-location.png',
+          //- iconImageSize: [48, 51],
+          //- iconImageOffset: [-24, -25]
+        }
+        var myMap = new ymaps.Map('map', {
+          center: [55.58446640485473,37.385470500000004],
+          zoom: 8,
+          controls: []
+        }, {
+          searchControlProvider: 'yandex#search'
+        });
+        myPlacemark01 = new ymaps.Placemark([55.58446640485473,37.385470500000004], {}, mapOptions);
+        myMap.geoObjects.add(myPlacemark01);
+        myMap.behaviors.disable('scrollZoom');
+      });
+
+
+  .contacts
+    .contacts__map#map
+    .container
+      .contacts__desc
+        a(href="tel:73452681414").contacts__phone +7 (3452) 68-14-14
+        address.contacts__address Тюмень, ул. Мельникайте, 111
+           +icon('ico-loc')
+        p.contacts__worktime понедельник-пятница <br>с 7:00 до 18:00 <br>суббота <br>с 9:00 до 15:00
+        .contacts__social
+          p.contacts__social-text Присоединяйтесь к нам в соц. сетях
+          ul.contacts__social-menu
+            li
+              a(href="#").contacts__social-link
+                +icon('ico-vk')
+            li
+              a(href="#").contacts__social-link
+                +icon('ico-fb')
+            li
+              a(href="#").contacts__social-link
+                +icon('ico-im')
+
+  .seo
+    .container
+      h3.seo__heading Модная мужская одежда - достойный выбор.
+      p.seo__text Мужская одежда - звучит сильно! Нам с детства известна поговорка о том, что встречают всегда по внешнему виду. И это не обман: опрятная одежда, подобранная со вкусом и в тему встречи всегда производит приятное впечатление. Но успешного человека характеризует не только умение быть аккуратным. Современные мужчины – такие же охотники, но их поле деятельности перенеслось из лесов в офисы, где «обмундирование» иногда играет жизненно важную роль. Мода – еще один параметр, по которому выбирают лидера. Умение следовать всем капризам этой дамы и при этом не потерять свою индивидуальность – вот ключевой залог создания успешного образа самодостаточного человека.
+

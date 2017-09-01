@@ -2,4 +2,14 @@ ProjectTitle: Discount-msk
 
 PageList:
 - file: homepage.html
-  ready: 5
+  ready: 100
+- file: card.html
+  ready: 100
+- file: catalog.html
+  ready: 100
+- file: contacts.html
+  ready: 100
+- file: basket.html
+  ready: 100
+- file: typography.html
+  ready: 100

@@ -1,11 +1,110 @@
 $sprite: (
-	logo: (
+	arrow-down-dark: (
+		offset-x: -192px,
+		offset-y: -61px,
+		width: 10px,
+		height: 6px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	arrow-down-orange: (
+		offset-x: -132px,
+		offset-y: -61px,
+		width: 10px,
+		height: 6px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	arrow-down-white: (
+		offset-x: -172px,
+		offset-y: -61px,
+		width: 10px,
+		height: 6px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	arrow-right: (
+		offset-x: -132px,
+		offset-y: -77px,
+		width: 6px,
+		height: 10px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	arrow-up-orange: (
+		offset-x: -152px,
+		offset-y: -61px,
+		width: 10px,
+		height: 6px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	delete: (
+		offset-x: -347px,
+		offset-y: -32px,
+		width: 11px,
+		height: 11px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	input-error: (
+		offset-x: -368px,
+		offset-y: -32px,
+		width: 10px,
+		height: 10px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	input-valid: (
+		offset-x: -388px,
+		offset-y: -32px,
+		width: 11px,
+		height: 9px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	logo-footer: (
 		offset-x: 0px,
 		offset-y: 0px,
+		width: 401px,
+		height: 22px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	logo: (
+		offset-x: 0px,
+		offset-y: -32px,
 		width: 337px,
 		height: 19px,
-		total-width: 337px,
-		total-height: 19px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	next: (
+		offset-x: -66px,
+		offset-y: -61px,
+		width: 56px,
+		height: 56px,
+		total-width: 401px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	prev: (
+		offset-x: 0px,
+		offset-y: -61px,
+		width: 56px,
+		height: 56px,
+		total-width: 401px,
+		total-height: 117px,
 		image: '../img/sprite.png'
 	),
 );
@@ -64,6 +163,39 @@ $sprite: (
 
 
 
+	.icon-arrow-down-dark {
+		@include sprite(arrow-down-dark)
+	}
+	.icon-arrow-down-orange {
+		@include sprite(arrow-down-orange)
+	}
+	.icon-arrow-down-white {
+		@include sprite(arrow-down-white)
+	}
+	.icon-arrow-right {
+		@include sprite(arrow-right)
+	}
+	.icon-arrow-up-orange {
+		@include sprite(arrow-up-orange)
+	}
+	.icon-delete {
+		@include sprite(delete)
+	}
+	.icon-input-error {
+		@include sprite(input-error)
+	}
+	.icon-input-valid {
+		@include sprite(input-valid)
+	}
+	.icon-logo-footer {
+		@include sprite(logo-footer)
+	}
 	.icon-logo {
 		@include sprite(logo)
+	}
+	.icon-next {
+		@include sprite(next)
+	}
+	.icon-prev {
+		@include sprite(prev)
 	}

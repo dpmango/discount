@@ -1,0 +1,36 @@
+// Products
+
+.products-item
+  background: #fff
+  padding: 0 20px 38px
+  margin: 0 0 20px
+  text-align: center
+  color: #262e39
+  font-size: 14px
+  line-height: 24px
+  transition: all $transitionSpeed $ease
+  &:hover
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15)
+    transform: translate3d(0,-2px,0)
+  &__image
+    margin: 0 -20px 18px
+    border-bottom: 1px solid #E5E5E5
+    height: 253px
+    padding: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      max-height: 100%
+  &__price
+    margin: 0
+    font: 900 22px/24px 'Playfair Display', serif
+  &__tag
+    margin: 0 0 20px
+    a
+      transition: .25s
+      color: #ed4b15
+      text-decoration: underline
+      &:hover
+        color: #FF7344
+    
