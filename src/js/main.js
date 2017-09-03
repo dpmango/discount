@@ -4,8 +4,8 @@ $(document).ready(function(){
   // Global variables
   //////////
 
-  const _window = $(window);
-  const _document = $(document);
+  var _window = $(window);
+  var _document = $(document);
 
   function isRetinaDisplay() {
     if (window.matchMedia) {
@@ -152,8 +152,8 @@ $(document).ready(function(){
   //////////
 
 
-   
-   
+
+
     $('.hero-slider').on('init', function(event, slick){
       $('.hero-slide[data-slide=' + 1 + ']').addClass('showing');
     });
@@ -188,7 +188,7 @@ $(document).ready(function(){
 
 
 
-  // ----- 
+  // -----
 
 
 

@@ -14,7 +14,7 @@
     margin: 0 0 25px
     text-align: center
     color: #262e39
-  &__text 
+  &__text
     text-align: center
     display: block
     max-width: 670px
@@ -109,7 +109,7 @@
       max-width: 100%
       max-height: 100%
       transform: translate3d(15%,0,0)
-    
+
   &__title
     font: 700 36px/1.111 'Playfair Display', serif
     margin: 0 0 40px
@@ -167,7 +167,7 @@
       a
         color: #fff;
         border-color: #fff
-          
+
     .catalog-item__info
       position: relative
       bottom: 0
@@ -270,6 +270,7 @@
 
 .catalog-content
   flex: 1
+  flex: 0 1 auto
   +r($desktop)
     order: 2
 
@@ -278,12 +279,12 @@
 .catalog-aside
   display: flex
   flex-wrap: wrap
-  flex: 252px 0 0
+  flex: 0 0 252px
   margin: 0 38px 0 0
   background: #fff
   align-self: flex-start
   +r($desktop)
-    flex: 100% 0 0
+    flex: 0 0 100%
     margin: 0 0 35px
     order: 1
 
@@ -327,7 +328,7 @@
   width: 100%
   padding: 0 0 10px
   margin: 0 0 15px
-  
+
   &:last-child
     border: none
     padding-bottom: 0
@@ -441,4 +442,3 @@
   border: none
   border-top: 1px solid #DDDEDF
   margin: 35px 0
-
