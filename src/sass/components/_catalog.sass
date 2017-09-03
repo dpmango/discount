@@ -263,14 +263,14 @@
 
 .catalog-container
   display: flex
-  flex-wrap: wrap
+  +r($desktop)
+    flex-wrap: wrap
 
 
 
 
 .catalog-content
-  flex: 1
-  flex: 0 1 auto
+  flex: 1 1 auto
   +r($desktop)
     order: 2
 
