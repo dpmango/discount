@@ -230,47 +230,28 @@ $(document).ready(function(){
 
   // Card Slider
 
-  $('.card-slider').fotorama({
-    width: '100%',
-    margin: 0,
-    loop: true,
+
+  $('.card-slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: false,
+    asNavFor: '.card-thumbs'
+  });
+
+  $('.card-thumbs').slick({
+    infinite: false,
+    slidesToShow: 3,
+    infinite: false,
+    slidesToScroll: 3,
+    asNavFor: '.card-slider',
+    dots: true,
     arrows: false,
-    nav: 'thumbs',
-    thumbwidth: 109,
-    thumbheight: 99,
-    thumbmargin: 10,
-    thumbborderwidth: 1
+    centerMode: true,
+    focusOnSelect: true,
+    variableWidth: true
   });
-
-  var fotorama = $('.card-slider').data('fotorama');
-
-  $('.card-slider-prev').on('click', function(event) {
-    event.preventDefault();
-    fotorama.show('<')
-  });
-  $('.card-slider-next').on('click', function(event) {
-    event.preventDefault();
-    fotorama.show('>')
-  });
-
-  // $('.gallery-slider').slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: true,
-  //   fade: true,
-  //   asNavFor: '.gallery-thumbs'
-  // });
-
-  // $('.gallery-thumbs').slick({
-  //   // slidesToShow: 3,
-  //   infinite: false,
-  //   slidesToScroll: 1,
-  //   asNavFor: '.gallery-slide',
-  //   dots: true,
-  //   centerMode: false,
-  //   focusOnSelect: true,
-  //   variableWidth: true
-  // });
 
   //////////
   // MODALS

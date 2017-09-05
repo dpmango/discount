@@ -106,75 +106,143 @@
 
 .card-slider-container
   position: relative
-  height: 100%
   margin: 0 -1px
+  // overflow: hidden
+  height: 100%
 
-.card-slider-prev, .card-slider-next
-  display: block
-  background: none
-  position: absolute
-  top: 50%
-  text-indent: -9999px
-  z-index: 10
-  cursor: pointer
-  margin: -28px 0 0
-  transition: .25s
+.card-slider
+  position: relative
+  height: 100%
+  .slick-list, .slick-track
+    height: 100%
 
-  &:hover
-    transform: scale(0.9)
-
-.card-slider-prev
+  .slick-arrow
+    display: block
+    background: none
+    position: absolute
+    top: 50%
+    text-indent: -9999px
+    z-index: 10
+    cursor: pointer
+    margin: -28px 0 0
+    transition: .25s
+    &:hover
+      transform: scale(0.9)
+  .slick-prev
     left: -28px
     @include sprite(prev)
-.card-slider-next
+  .slick-next
     right: -28px
     @include sprite(next)
 
-.card-slider
-  height: 100%
-  position: relative
-  display: flex
-  overflow: hidden
-  // background: #fff
-  
-  .fotorama__wrap, .fotorama__stage, .fotorama__stage__shaft
-    // height: 100% !important
-    display: flex
+.card-slider-item
+  img
+    display: block
+    max-width: 100%
+    min-height: 100%
 
-  .fotorama__nav-wrap
+.card-thumbs
+  position: absolute
+  bottom: 20px
+  right: 20px
+  left: 20px
+  .slick-dots
+    position: fixed
+    visibility: hidden
+
+.card-thumbs-item
+  width: 110px
+  max-width: 110px
+  height: 100px
+  margin: 0 10px
+  position: relative
+  cursor: pointer
+  background: #fff
+  &:after
+    content: ''
+    display: block
     position: absolute
-    right: 20px
-    left: 20px
-    bottom: 25px
-  .fotorama__nav
-    text-align: right
-  .fotorama__thumb
-    background: #fff
-  .fotorama__thumb-border
-    background: none
-    border-color: #FF5116
- 
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 1px solid #FF5116
+    opacity: 0
+    transition: .25s
   img
     display: block
     width: 100%
-    max-width: none
     height: 100%
-    min-height: 100% !important
     object-fit: cover
+  &.slick-current:after
+    opacity: 1
 
-+r($tablet)
-  .card-slider
-    .fotorama__wrap, .fotorama__stage, .fotorama__stage__shaft
-      // height: auto !important
-    .fotorama__nav
-      text-align: center
+// .card-slider-prev, .card-slider-next
+//   display: block
+//   background: none
+//   position: absolute
+//   top: 50%
+//   text-indent: -9999px
+//   z-index: 10
+//   cursor: pointer
+//   margin: -28px 0 0
+//   transition: .25s
 
-    // height: 100% !important
+//   &:hover
+//     transform: scale(0.9)
+
+// .card-slider-prev
+//     left: -28px
+//     @include sprite(prev)
+// .card-slider-next
+//     right: -28px
+//     @include sprite(next)
+
+// .card-slider
+//   height: 100%
+//   position: relative
+//   // display: flex
+//   overflow: hidden
+//   // background: #fff
+  
+//   .fotorama__wrap, .fotorama__stage, .fotorama__stage__shaft
+//     // height: 100% !important
+//     display: flex
+
+//   .fotorama__nav-wrap
+//     position: absolute
+//     right: 20px
+//     left: 20px
+//     bottom: 25px
+//   .fotorama__nav
+//     // text-align: right
+//   .fotorama__thumb
+//     background: #fff
+//   .fotorama__thumb-border
+//     background: none
+//     border-color: #FF5116
+ 
+//   img
+//     display: block
+//     width: 100%
+//     max-width: none
+//     height: 100%
+//     min-height: 100% !important
+//     object-fit: cover
+
+// +r($tablet)
+//   .card-slider
+//     .fotorama__wrap, .fotorama__stage, .fotorama__stage__shaft
+//       // height: auto !important
+//     .fotorama__nav
+//       text-align: center
+
+//     // height: 100% !important
 
 
-+rmin($tablet)
-  .card-slider
-    .fotorama__wrap, .fotorama__stage, .fotorama__stage__shaft
-      height: 100% !important
+// +rmin($tablet)
+//   .card-slider
+//     .fotorama__wrap, .fotorama__stage, .fotorama__stage__shaft
+//       height: 100% !important
 
 
