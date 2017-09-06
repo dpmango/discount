@@ -91,6 +91,9 @@
   // background: #FF5116
   background: #FF5116
   color: #fff
+  max-height: 850px
+  +r($tablet)
+    max-height: 100%
   .col-md-8
     display: flex
     flex-direction: column
@@ -156,7 +159,6 @@
   height: 100%
   text-align: center
   img
-    object-fit: none
     min-width: 100%
     min-height: 100%
     width: auto
