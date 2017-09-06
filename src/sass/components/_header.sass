@@ -4,7 +4,7 @@
   top: 0
   left: 0
   right: 0
-  z-index: 10
+  z-index: 11
   background: #fff
   line-height: 1
   &__top
@@ -45,7 +45,7 @@
       opacity: .7
     img
       max-width: 100%
-     
+
   &__contact
     flex: 0 1 30%
     display: flex
@@ -235,23 +235,24 @@
 
 +r(610)
   .header
+    position: fixed
+    box-shadow: 0px 2px 6px rgba(black, .1)
+    &__top
+      min-height: auto
     &__contact
       display: none
+    &__logo
+      padding: 10px 20px 5px 20px
+      transform: translateY(-3px)
 
 +r($mobile-s)
   .header
     &__logo
-      // padding-left: 10px
-      // .icon
-        // transform: scale(.75)
-
+      padding-left: 10px
 +r(375)
   .header
     &__logo
-      // padding-left: 0
-      // .icon
-        // transform: scale(.65)
-
+      padding-left: 0
 
 
 .is-searchOpen

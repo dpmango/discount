@@ -245,19 +245,29 @@
       display: inline-block
       vertical-align: top
       margin: 0 4px
+      cursor: pointer
       &.slick-active
-        button
+        &::after
           border-color: #ED4B15
           background: #ED4B15
-    button
-      width: 14px
-      height: 14px
-      background: none
-      text-indent: -9999px
-      display: block
-      border: 1px solid #0D0D0D
-      border-radius: 50%
-      cursor: pointer
+      &:hover
+        &::after
+          border-color: #ED4B15
+          background: rgba(#ED4B15, .5)
+      button
+        display: none
+      &::after
+        display: inline-block
+        content: ' '
+        width: 14px
+        height: 14px
+        background: none
+        text-indent: -9999px
+        display: block
+        border: 1px solid #0D0D0D
+        border-radius: 50%
+        cursor: pointer
+        transition: all .25s ease
 
 
 
