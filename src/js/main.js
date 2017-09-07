@@ -235,6 +235,12 @@ $(document).ready(function(){
 
 
   // Formstyler
-  $('.ui-select, .ui-number').styler();
+  setTimeout(function() {
+    $('.ui-select, .ui-number').styler();
+  }, 100);
+
+  $(document).on('click', '.jq-selectbox', function(){
+    $(this).trigger('refresh')
+  })
 
 });
